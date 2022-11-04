@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br><br>
+    <div style="max-width:40%;margin:auto;padding:10px 30px; border:1px solid grey;border-radius:10px;">
+        <form method="post">
+            {% csrf_token %}
+            {{form}}
+            <br><br>
+            <button type="submit" class="btn btn-outline-success">Submit</button>
+        </form>
+    </div>
+{% endblock content %}

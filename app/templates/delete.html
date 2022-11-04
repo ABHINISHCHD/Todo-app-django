@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+        <br><br>
+        <div style="max-width:60%;margin:auto;text-align: center;border:1px solid grey;border-radius:10px;padding:10px 30px;">
+            
+        <P style="font-size:1.7rem;">are you sure you wanna delete the task <span style="font-weight: bolder;">{{data.title}}</span> ?</P>
+        <a href="{% url 'home' %} " class="btn btn-outline-success">cancel</a>
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-outline-danger" style="margin-top:10px;">Delete</button>
+        </form>
+        </div>
+{% endblock content %}
